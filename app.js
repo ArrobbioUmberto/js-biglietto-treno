@@ -28,4 +28,6 @@ if (passengerAge < 18){
 else {
     totalKm = numberKm * ticketPrice
 }
-console.log('questo è il prezzo del biglietto', totalKm)
+let decimalTotalKm = parseFloat(totalKm.toFixed(2))
+
+console.log('questo è il prezzo del biglietto', decimalTotalKm)
