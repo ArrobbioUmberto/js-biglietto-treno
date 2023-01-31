@@ -15,19 +15,54 @@ let numberKm = parseFloat( prompt('Quanti chilometri devi percorrere?'))
 console.log('questi sono i km che vuole percorrere', numberKm)
 let passengerAge = parseInt (prompt('Quanti anni hai ?'))
 console.log('questa è l\'età del nostro passeggero', passengerAge)
-
+let firstName = prompt('Come ti chiami ?')
+console.log( 'questo è il nome del passeggero', firstName)
 const ticketPrice = 0.21
+let lastName = prompt('Dimmi il tuo cognome')
+console.log('questo è il cognome del passeggero', lastName)
 
-let totalKm = numberKm * ticketPrice
+let totalPrice = numberKm * ticketPrice
 
+let discountYoung = 0.8
+
+let discountOld = 0.6
 if (passengerAge < 18){
-    totalKm = (numberKm * ticketPrice) * 0.8
+    totalPrice = (numberKm * ticketPrice) * discountYoung
 } else if (passengerAge > 64){
-    totalKm = (numberKm * ticketPrice) * 0.6
+    totalPrice = (numberKm * ticketPrice) * discountOld
 }
 else {
-    totalKm = numberKm * ticketPrice
+    totalPrice = numberKm * ticketPrice
 }
-let decimalTotalKm = parseFloat(totalKm.toFixed(2))
+let decimalTotalKm = parseFloat(totalPrice.toFixed(2))
 
 console.log('questo è il prezzo del biglietto', decimalTotalKm)
+
+
+
+
+// BONUS 
+
+// prendo il p con l'id kilometers 
+
+// const HTMLKm = document.getElementById('kilometers')
+
+// HTMLKm.innerHTML = numberKm
+
+// faccio la stessa cosa per gli altri spazi del biglietto 
+
+// const HTMLName = document.getElementById('name')
+
+// HTMLName.innerHTML = firstName
+
+// const HTMLSurname = document.getElementById('surname')
+
+// HTMLSurname.innerHTML = lastName
+
+// const HTMLDiscount = document.getElementById ('discount')
+
+// HTMLDiscount.innerHTML = discountYoung
+
+// const HTMLPrice = document.getElementById('price')
+
+// HTMLPrice.innerHTML = totalPrice
